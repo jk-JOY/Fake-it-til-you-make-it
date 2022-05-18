@@ -64,3 +64,73 @@ n2까지 3개월.
 
 블록의 인용문구는 >  >  > 표시로 한다
 
+# 5.18일
+Collection에 대해서 배웠다. 
+컬렉션은 숫자를 마음대로 넣고 뺄 수 있는 고무줄 상자이다 
+컬렉션의 종류로써는 
+1. ArrayList
+2. List
+3. Hashtable
+4. Dictionary
+5. Queue
+6. Stack 
+이 있는데 
+
+1.ArrayList는 아무Type도 막 담을 수 있다.
+ ```Cshap ArrayList arrayList = new ArrayList();```   
+2.List는 특정 자료형 대로만 넣어야한다.
+```Cshap ``` List<int> list = new List<int>(); ```   
+3.hashtable은 특정 값을 얻기 위해서는 열쇠가 필요하다
+```Cshap  Hashtable hashtable = new Hashtable(); ```   
+4. Dictionary는 해쉬테이블과 똑같은데, 자료형을 명시해주는것! (arraylist와 list의 유사함과 비슷)
+```Cshap  Dictionary<string, int> dictionary = new Dictionary<string, int>(); ```    
+  
+여기까지 보면 서로의 공통점이 보인다. 
+ - ArrayList , Hashtable은 박스가 크다. type이 정해진 상태가 아니다.연산에서 불리하다.
+ - List와 Dictionary는 타입을 명시한대로 사용해야하기때문에 결과적으로 연산에서 유리하다.
+
+  
+  그리고 나머지의 Queue와 Stack이 있다. 
+  
+5. Queue는 FIFO로써 언큐(in) 디큐(out)으로 존재한다.
+  - 특이조건- 조건문에 걸렸기떄문에 쓸대 주의해서 갯수가 있는지 없는지 확인하고 디큐를 해줘야한다.
+  ex) 
+  ```Cshap
+   Queue<int> queue = new Queue<int>();
+  
+  void Start(){
+  if(Queue.Count != 0)
+  {
+    Queue.enqueue(5);
+    print(Queue.dequeue());
+  }
+  }
+  ```
+  
+  ```Cshap     
+  
+ Stack<int> stack = new Stack<int>();  
+
+   private void Start()
+    {
+        stack.Push(1);
+        stack.Push(2);
+    print(stack.Pop());
+        if(stack.Count != 0) //하나라도 있을 경우에만 출력!
+  }
+  ```
+   //큐와 스택은 자료형을 명시해줄 수도 있고 안해줘도 된다. 
+    //그러나 명시해주는 방향으로 가는게 맞는것 같다, 서로에게 대화가 잘 통해야하니까!
+  
+  //큐 - 포션제작 대기줄
+    //가장먼저 클릭한 포션(가장먼저 제작),    가장 마지막에 클릭된 포션(가장 마지막 제작), 은행대기줄
+
+    //스택 요리게임, 설거지 게임
+    // 기존에 쌓여져 있던 그릇들을 치우는데 가장 위에부터 치우는것을 스택
+
+
+
+
+
+
+
