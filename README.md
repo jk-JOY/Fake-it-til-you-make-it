@@ -77,14 +77,22 @@ Collection에 대해서 배웠다.
 이 있는데 
 
 1.ArrayList는 아무Type도 막 담을 수 있다.
- ```Cshap ArrayList arrayList = new ArrayList();```   
+
+ ``` C# ArrayList arrayList = new ArrayList(); ```   
+ 
 2.List는 특정 자료형 대로만 넣어야한다.
-```Cshap ``` List<int> list = new List<int>(); ```   
+
+``` C# List<int> list = new List<int>(); ```   
+ 
 3.hashtable은 특정 값을 얻기 위해서는 열쇠가 필요하다
-```Cshap  Hashtable hashtable = new Hashtable(); ```   
+ 
+``` C# Hashtable hashtable = new Hashtable(); ```   
+ 
 4. Dictionary는 해쉬테이블과 똑같은데, 자료형을 명시해주는것! (arraylist와 list의 유사함과 비슷)
-```Cshap  Dictionary<string, int> dictionary = new Dictionary<string, int>(); ```    
+ 
+``` C# Dictionary<string, int> dictionary = new Dictionary<string, int>(); ```    
   
+ 
 여기까지 보면 서로의 공통점이 보인다. 
  - ArrayList , Hashtable은 박스가 크다. type이 정해진 상태가 아니다.연산에서 불리하다.
  - List와 Dictionary는 타입을 명시한대로 사용해야하기때문에 결과적으로 연산에서 유리하다.
@@ -95,7 +103,7 @@ Collection에 대해서 배웠다.
 5. Queue는 FIFO로써 언큐(in) 디큐(out)으로 존재한다.
   - 특이조건- 조건문에 걸렸기떄문에 쓸대 주의해서 갯수가 있는지 없는지 확인하고 디큐를 해줘야한다.
   ex) 
-  ```Cshap
+  ```C#
    Queue<int> queue = new Queue<int>();
   
   void Start(){
@@ -107,7 +115,7 @@ Collection에 대해서 배웠다.
   }
   ```
   
-  ```Cshap     
+  ```C#     
   
  Stack<int> stack = new Stack<int>();  
 
