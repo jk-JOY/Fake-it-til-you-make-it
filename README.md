@@ -181,7 +181,8 @@ public class StructedTest : MonoBehaviour
     Youtube keidy2 = new Youtube(5, 6, 7, 8);
 }
 
-```  이런 방식으로 사용한다.
+```
+이런 방식으로 사용한다.
 
 3. Enum
 -어떤 것을 열거한다는 뜻(넣고 싶은 값을 직접 골라서 사용할 수 있다.)
