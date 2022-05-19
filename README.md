@@ -64,7 +64,7 @@ n2까지 3개월.
 
 블록의 인용문구는 >  >  > 표시로 한다
 
-# 5.18일
+# 5.18일 Collection
 Collection에 대해서 배웠다. 
 컬렉션은 숫자를 마음대로 넣고 뺄 수 있는 고무줄 상자이다 
 컬렉션의 종류로써는 
@@ -139,6 +139,50 @@ Collection에 대해서 배웠다.
 
 
 
+# 5.19일 NameSpace, (Struct+ 생성자 ) Class & Enum
+1. nameSpace는 누군가 만들어놓은 것을 쓴다고 생각해야겠다.
+-NameSpace를 쓴다는 것은 대형프로젝트, 협업, 외부 라이브러리를 경험하면서 느낄 수 있는데 
+이름이 중복될때 문제를 방지하기위해 각각의 NameSpace를 만들고 사용하고 싶은 곳에 직접 선언하여 관리해주는 방법이 있다고 한다.
 
 
+2. Struct + 생성자 
+-struct는 Class와 유사한 점이 많다.
+struct는 Legacy선배로써 Class의 형님뻘이다. 
+-후배 Class는 상속이 가능하지만, struct는 X , 
+-그리고 Class는 변수에 값을 직접 대입해 줄 수 있지만, struct는 불가능하다.(매개변수로써 타Class에서 대입을 해줘야한다.)
 
+-struct는 값 타입,
+-Class는 주소 타입이다.
+
+-특이점! Class로 생성할때에는 ```C# Class ~~ = new Class(); ``` 이렇게 해주었지만
+Struct는 선언과 동시에 new Class가 처리되기때문에 따로 공간을 만들어주지 않아도 된다!
+
+
+-생성자는 struct이 직접 값을 대입해주지 못하기때문에 그것을 도와주는 것이 생성자이고 
+```C#
+public struct Youtube
+{
+    public int a; 
+    public int b; 
+    public int c; 
+    public int d; 
+
+    //생성자 - 각각 매칭시켜주는것. 
+    public Youtube(int _a, int _b, int _c, int _d)
+    {
+        a = _a; b = _b; c = _c; d = _d;
+    }
+}
+
+public class StructedTest : MonoBehaviour
+{
+    int a;
+    Youtube keidy = new Youtube(1, 2, 3, 4);
+    Youtube keidy2 = new Youtube(5, 6, 7, 8);
+}
+
+```  이런 방식으로 사용한다.
+
+3. Enum
+-어떤 것을 열거한다는 뜻(넣고 싶은 값을 직접 골라서 사용할 수 있다.)
+-특정 조건에 따라서 Enum 값을 사용하는 센스있는 코더로 가까워져 가자!
